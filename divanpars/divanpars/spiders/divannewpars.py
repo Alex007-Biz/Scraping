@@ -12,7 +12,10 @@ class DivannewparsSpider(scrapy.Spider):
             yield {
                 'name' : divan.css('div.lsooF span::text').get(),
                 'price' : divan.css('div.q5Uds span::text').get(),
+                'url' : divan.css('a').attrib['href']
             }
+# spyder1 = DivannewparsSpider()
+# spyder1.parse()
 
 
 
